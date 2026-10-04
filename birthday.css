@@ -467,32 +467,8 @@ body{
 }
 
 /* ============================================================
-   NOW PLAYING — song title + lyric line, and a mute toggle
+   MUTE TOGGLE
    ============================================================ */
-.lyrics{
-  position:absolute; left:16px; top:max(14px, env(safe-area-inset-top)); z-index:10;
-  max-width:min(78vw, 340px);
-  padding:10px 14px; border-radius:14px;
-  background:rgba(255,248,242,.72);
-  border:1px solid rgba(150,60,80,.18);
-  box-shadow:0 6px 20px -8px rgba(120,20,50,.4);
-  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-  pointer-events:none;
-  opacity:0; transform:translateY(-8px);
-  transition:opacity .8s ease, transform .8s ease;
-}
-.lyrics.is-playing{ opacity:1; transform:translateY(0); }
-.lyrics__title{
-  margin:0 0 4px;
-  font:700 13px/1.2 "Fraunces", Georgia, serif;
-  color:#fff; background:linear-gradient(90deg,#e6396a,#d81e57);
-  display:inline-block; padding:3px 9px; border-radius:999px;
-}
-.lyrics__line{
-  margin:0;
-  font:italic 500 16px/1.35 "Cormorant Garamond", Georgia, serif;
-  color:#8a2a45;
-}
 .mute{
   position:absolute; right:16px; top:max(14px, env(safe-area-inset-top)); z-index:10;
   width:38px; height:38px; border-radius:50%;

@@ -939,11 +939,9 @@ if (isRecord){
 {
   const song = document.getElementById('song');
   const mute = document.getElementById('mute');
-  const lyrics = document.getElementById('lyrics');
   if (song && !isRecord){
     song.volume = 0.6;
-    const show = () => lyrics.classList.add('is-playing');
-    const tryPlay = () => song.play().then(show).catch(() => {});
+    const tryPlay = () => song.play().catch(() => {});
     const unlock = () => {
       if (!song.paused) return;
       tryPlay();
